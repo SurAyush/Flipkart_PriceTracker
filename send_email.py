@@ -4,9 +4,9 @@ from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 
 # Input email details
-def send_email_func(product,price,url,threshold,imgname):
+def send_email_func(product,price,url,threshold,imgname,receiver):
     sender_email = "avisinghal627@gmail.com"
-    receiver_email = "ayushsur26@gmail.com"
+    receiver_email = receiver
     subject = f"Exciting News: Price Drop Alert for {product}!"
     text = f"Dear Valued Customer,\n We hope this message finds you well. We're delighted to inform you of some fantastic news regarding the product you've shown interest in, {product}.\nAs per your request, we've been closely monitoring the pricing for the product and are thrilled to announce that there has been a significant drop in its price! The current price has fallen below the threshold price of {threshold}, which you provided to us earlier.\nNew price: {price}\nYou can take advantage of this price drop by visiting the following link: {url} \nWe understand how important it is to get the best value for your money, and we're thrilled to be able to offer you this reduced price on {product}.\nThank you for choosing us for your needs. We look forward to serving you again soon!"
     img_location = f"{imgname}.png"

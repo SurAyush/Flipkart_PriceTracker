@@ -5,7 +5,6 @@ from matplotlib import pyplot as plt
 def save_graph(id,title,threshold):
 
     df = pd.read_csv('FLipkartWebScraperDataset.csv')
-    # t = "realme 12 Pro 5G (Navigator Beige, 128 GB) (8 GB RAM)"
     df2 = df.loc[df['Title'] == title]
     price_list = list(df2['Price'])
     time_list = list(df2['Date'])
@@ -25,5 +24,6 @@ def save_graph(id,title,threshold):
     plt.legend()
     # plt.show()
     plt.savefig(f'{id}.png')
+    plt.clf()
 
 # save_graph(uuid.uuid4(),12,25000)
